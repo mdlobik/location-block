@@ -97,22 +97,25 @@ registerBlockType( 'plugins/location-block', {
 
 		return (
 			<div className={ props.className }>
+				<div className="Namebox">
+				<PlainText className="name"
 
-				<RichText className="name"
 						  tagName="div"
 						  value={ name }
 						  onChange={ changeName }
 						  placeholder="What is the name of your location?"
 				/>
+				</div>
 				<PlainText className="address"
+
 						   value={ address }
 						   onChange={ changeAddress }
-						   placeholder="123 Fake St.
-						   				New Berlin, WI 53151"
+						   placeholder="Address"
 				/>
-				<div className="quote-profile">
+				<div className="location-profile">
 					<div className="photo">
-						<MediaUploadCheck>
+							<p>Photo of Location:</p>
+							<MediaUploadCheck>
 							<MediaUpload
 								allowedTypes={['image']}
 								onSelect={selectImage}
@@ -126,7 +129,7 @@ registerBlockType( 'plugins/location-block', {
 						<PlainText className="author"
 								   value={ author }
 								   onChange={ changeAuthor }
-								   placeholder="Matt Dlobik"
+								   placeholder="Your Name"
 						/>
 
 					</div>
@@ -150,13 +153,17 @@ registerBlockType( 'plugins/location-block', {
 
 		return (
 			<div className={ props.className }>
+				<p>Name of Location:</p>
 				<RichText.Content tagName="div" className="name" value={ props.attributes.name }/>
 				<div className="location-profile">
+					<p>Address:</p>
 					<p className="address">{ props.attributes.address }</p>
+					<p>Photo of Location</p>
 					<div className="photo">
 						<img src={props.attributes.imgUrl} alt={'Photo of ' + props.attributes.name}/>
 					</div>
 					<div className="text">
+						<p>Author:</p>
 						<p className="author">{ props.attributes.author }</p>
 					</div>
 				</div>
