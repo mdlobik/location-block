@@ -92,7 +92,7 @@ registerBlockType( 'plugins/location-block', {
 
 		function selectImage( value ) {
 			// console.log(value);
-			setAttributes( { imgUrl: value.sizes.thumbnail.url } ); // thumbnail, full, medium
+			setAttributes( { imgUrl: value.sizes.medium.url } ); // thumbnail, full, medium
 		}
 
 		return (
@@ -154,7 +154,7 @@ registerBlockType( 'plugins/location-block', {
 		return (
 			<div className={ props.className }>
 
-				<h2>Locations</h2>
+
 				<div className="name"><span className="title">Location Name:</span> { props.attributes.name }</div>
 				<p></p>
 

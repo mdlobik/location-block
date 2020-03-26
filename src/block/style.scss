@@ -4,6 +4,7 @@
  * CSS for both Frontend+Backend.
  */
 @import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Rajdhani&display=swap');
 
 .wp-block-md-plugin-location-block  {
   background: $green;
@@ -13,17 +14,10 @@
   max-width: 740px;
   padding: 2rem;
 }
-.name {
-  font-family: "Quicksand";
+.name, .address, .author {
+  font-family: 'Rajdhani', sans-serif;
 }
 
-.address {
-  font-family: "Quicksand";
-}
-
-.author {
-  font-family: "Quicksand";
-}
 
 
 .entry-content p, .entry-content ol, .entry-content ul, .entry-content dl, .entry-content dt {
@@ -33,5 +27,12 @@
 
 
 .title {
-  font-weight: bold;
+
+  font-size: 1.1em;
+  font-family: 'Quicksand', cursive;
+}
+
+
+.photo img {
+  border: 2px solid black,
 }
