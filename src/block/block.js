@@ -120,7 +120,7 @@ registerBlockType( 'plugins/location-block', {
 								allowedTypes={['image']}
 								onSelect={selectImage}
 								render={({open}) =>
-									<img src={imgUrl} onClick={open} />
+									<img src={imgUrl} Test onClick={open} />
 								}
 							/>
 						</MediaUploadCheck>
@@ -153,20 +153,23 @@ registerBlockType( 'plugins/location-block', {
 
 		return (
 			<div className={ props.className }>
-				<p>Name of Location:</p>
-				<RichText.Content tagName="div" className="name" value={ props.attributes.name }/>
-				<div className="location-profile">
-					<p>Address:</p>
-					<p className="address">{ props.attributes.address }</p>
-					<p>Photo of Location</p>
+
+				<h2>Locations</h2>
+				<div className="name"><span className="title">Location Name:</span> { props.attributes.name }</div>
+				<p></p>
+
+				<div className="address"><span className="title"> Address:</span> { props.attributes.address }</div>
+				<p></p>
+
 					<div className="photo">
 						<img src={props.attributes.imgUrl} alt={'Photo of ' + props.attributes.name}/>
 					</div>
-					<div className="text">
-						<p>Author:</p>
-						<p className="author">{ props.attributes.author }</p>
+				<p></p>
+					<div className="author">
+
+						<div className="attribs"><span className="title"> Contributor:</span> { props.attributes.author }</div>
 					</div>
-				</div>
+
 			</div>
 		);
 	},

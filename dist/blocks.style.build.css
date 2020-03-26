@@ -9,10 +9,27 @@
  *
  * CSS for both Frontend+Backend.
  */
+@import url("https://fonts.googleapis.com/css?family=Quicksand&display=swap");
 .wp-block-md-plugin-location-block {
-  background: orangered;
+  background: #bada55;
   border: 0.2rem solid #292929;
   color: #292929;
   margin: 0 auto;
   max-width: 740px;
   padding: 2rem; }
+
+.name {
+  font-family: "Quicksand"; }
+
+.address {
+  font-family: "Quicksand"; }
+
+.author {
+  font-family: "Quicksand"; }
+
+.entry-content p, .entry-content ol, .entry-content ul, .entry-content dl, .entry-content dt {
+  font-family: NonBreakingSpaceOverride, "Quicksand", Garamond, "Times New Roman", serif;
+  letter-spacing: normal; }
+
+.title {
+  font-weight: bold; }
